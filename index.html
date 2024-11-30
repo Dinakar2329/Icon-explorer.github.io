@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body> 
+    <div class="container">     
+        <nav class="navbar">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+                    <!-- Background Circle -->
+                    <circle cx="30" cy="30" r="25" fill="#007bff" />
+                
+                    <!-- Magnifying Glass Icon -->
+                    <circle cx="30" cy="30" r="10" fill="white" />
+                    <line x1="37" y1="37" x2="50" y2="50" stroke="white" stroke-width="2" />
+                    <circle cx="50" cy="50" r="5" fill="white" />
+                
+                    <!-- Text "Icon Explorer" -->
+                    <text x="70" y="35" font-family="Arial, sans-serif" font-size="20" fill="#333" font-weight="bold">Icon Explorer</text>
+                </svg>
+            </div>
+            <div class="search-options">
+                <div class="search-container">
+                    <input type="text" id="iconSearch" placeholder="Search icons...">
+                    
+                    <select id="prefixSelect">
+                        <option value="">All Prefixes</option>
+                        <option value="mdi-">Material Design</option>
+                        <option value="fa-">Font Awesome</option>
+                        <option value="ion-">Ionicons</option>
+                        <option value="ph-">Phosphor Icons</option>
+                    </select>
+                    
+                    <select id="limitSelect">
+                        <option value="12">12 Icons</option>
+                        <option value="24">24 Icons</option>
+                        <option value="36">36 Icons</option>
+                        <option value="48">48 Icons</option>
+                    </select>
+                    
+                    <button id="searchBtn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </div>
+                
+    </nav>
+
+    <div id="loading">
+        <i class="fas fa-spinner fa-spin fa-2x"></i>
+    </div>
+    <div class="icon-results">
+        <div id="iconResults" class="icon-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;"></div>
+        <div class="pagination">
+            <button id="prevButton" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span id="pageInfo"></span>
+            <button id="nextButton">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+
+    </div>  
+     <div id="iconPreviewModal" class="icon-preview-modal">
+        <div class="icon-preview-content">
+            <div class="icon-preview-header">
+                <h2 id="modalIconName">Icon Name</h2>
+                <button id="closePreviewModal">&times;</button>
+            </div>
+            <div class="icon-preview-body">
+                <div class="icon-preview-visual">
+                    <div id="modalIconPreview" style="font-size: 200px;">
+                        <iconify-icon id="modalIconIcon"></iconify-icon>
+                    </div>
+                </div>
+                <div class="icon-preview-details">
+                    <h3>SVG Code</h3>
+                    <div class="svg-code-container">
+                        <pre id="svgCodePreview" class="svg-code-preview"></pre>
+                        <button id="copySvgCodeBtn" class="copy-svg-btn" aria-label="Copy SVG Code">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                            </svg>
+                            <svg class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style>
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                            <span class="tooltip">Copy SVG</span>
+                        </button>
+                    </div>
+                    <div class="download-buttons">
+                        <button id="downloadIcon" class="action-btn action-btn-primary">Download Icon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"></script>
+</body>
+</html>
+
