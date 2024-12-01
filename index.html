@@ -1,64 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Icon Explorer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./Images/favicon.png" type="image/png" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Jost:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-</head>
-<body> 
-    <div class="container">     
+      html {
+        font-family: "Jost", sans-serif !important;
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar bg-base-50 bg-white text-primary-content">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl" href="index.html">Icon Explorer</a>
+      </div>
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="search_icon.html">Search Icons</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img
+          src="https://picsum.photos/800/600?theme=nature"
+          alt="Icon Explorer Illustration"
+          class="max-w-sm rounded-lg shadow-2xl"
+          data-aos="fade-left"
+        />
+        <div data-aos="fade-right">
+          <h1 class="text-5xl font-bold">Discover Your Perfect Icons</h1>
+          <p class="py-6">
+            Find, preview, and download icons from multiple libraries with ease.
+            Icon Explorer makes icon search simple and intuitive.
+          </p>
+          <div class="flex gap-4">
+            <a href="search_icon.html" class="btn btn-primary">Search Icons</a>
+            <a href="##learn" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="bg-base-100 py-16" id="#learn">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">
+          Try Icon Explorer
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div
+            class="card bg-base-200 shadow-xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card-body items-center text-center">
+              <iconify-icon
+                icon="material-symbols:search"
+                width="64"
+                height="64"
+                class="text-primary"
+              ></iconify-icon>
+              <h3 class="card-title">Multi-Library Search</h3>
+              <p>
+                Search across Material Design, Font Awesome, and more icon
+                libraries.
+              </p>
+            </div>
+          </div>
+          <div
+            class="card bg-base-200 shadow-xl"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card-body items-center text-center">
+              <iconify-icon
+                icon="material-symbols:preview"
+                width="64"
+                height="64"
+                class="text-primary"
+              ></iconify-icon>
+              <h3 class="card-title">Instant Preview</h3>
+              <p>Quickly view and inspect icons before downloading.</p>
+            </div>
+          </div>
+          <div
+            class="card bg-base-200 shadow-xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card-body items-center text-center">
+              <iconify-icon
+                icon="material-symbols:download"
+                width="64"
+                height="64"
+                class="text-primary"
+              ></iconify-icon>
+              <h3 class="card-title">Easy Download</h3>
+              <p>Download icons in multiple formats with just a click.</p>
+            </div>
+          </div>
+          <div
+            class="card bg-base-200 shadow-xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card-body items-center text-center">
+              <iconify-icon
+                icon="fluent-mdl2:open-source"
+                width="64"
+                height="64"
+                class="text-primary"
+              ></iconify-icon>
+              <h3 class="card-title">Open Source</h3>
+              <p>Free and open source icon explorer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer bg-neutral text-neutral-content items-center p-4">
+      <aside class="grid-flow-col items-center">
+        <svg
+          width="36"
+          height="36"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          class="fill-current"
+        >
+          <path
+            d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"
+          ></path>
+        </svg>
+        <p>Copyright © 2024 - All right reserved</p>
+      </aside>
+    </footer>
+    <!-- <div class="container">
         <nav class="navbar">
             <div class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
-                    <!-- Background Circle -->
-                    <circle cx="30" cy="30" r="25" fill="#007bff" />
-                
-                    <!-- Magnifying Glass Icon -->
-                    <circle cx="30" cy="30" r="10" fill="white" />
-                    <line x1="37" y1="37" x2="50" y2="50" stroke="white" stroke-width="2" />
-                    <circle cx="50" cy="50" r="5" fill="white" />
-                
-                    <!-- Text "Icon Explorer" -->
-                    <text x="70" y="35" font-family="Arial, sans-serif" font-size="20" fill="#333" font-weight="bold">Icon Explorer</text>
-                </svg>
-            </div>
-            <div class="search-options">
-                <div class="search-container">
-                    <input type="text" id="iconSearch" placeholder="Search icons...">
                     
-                    <select id="prefixSelect">
-                        <option value="">All Prefixes</option>
-                        <option value="mdi-">Material Design</option>
-                        <option value="fa-">Font Awesome</option>
-                        <option value="ion-">Ionicons</option>
-                        <option value="ph-">Phosphor Icons</option>
-                    </select>
-                    
-                    <select id="limitSelect">
-                        <option value="12">12 Icons</option>
-                        <option value="24">24 Icons</option>
-                        <option value="36">36 Icons</option>
-                        <option value="48">48 Icons</option>
-                    </select>
-                    
-                    <button id="searchBtn">
-                        <i class="fas fa-search"></i> Search
-                    </button>
-                </div>
-            </div>
-                
+    <circle cx="30" cy="30" r="25" fill="#007bff" />
+
+    <circle cx="30" cy="30" r="10" fill="white" />
+    <line x1="37" y1="37" x2="50" y2="50" stroke="white" stroke-width="2" />
+    <circle cx="50" cy="50" r="5" fill="white" />
+
+    <text x="70" y="35" font-family="Arial, sans-serif" font-size="20" fill="#333" font-weight="bold">
+        Icon Explorer
+    </text>
+    </svg>
+    </div>
+    <div class="search-options">
+        <div class="search-container">
+            <input type="text" id="iconSearch" placeholder="Search icons..." />
+            <select id="prefixSelect" class="select select-accent w-full max-w-xs">
+                <option disabled selected value="">All Prefixes</option>
+                <option value="mdi-">Material Design</option>
+                <option value="fa-">Font Awesome</option>
+                <option value="ion-">Ionicons</option>
+                <option value="ph-">Phosphor Icons</option>
+            </select>
+
+            <select id="limitSelect" class="select select-accent w-full max-w-xs">
+                <option value="12">12 Icons</option>
+                <option value="24">24 Icons</option>
+                <option value="36">36 Icons</option>
+                <option value="48">48 Icons</option>
+            </select>
+
+            <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+        </div>
+    </div>
     </nav>
 
     <div id="loading">
         <i class="fas fa-spinner fa-spin fa-2x"></i>
     </div>
     <div class="icon-results">
-        <div id="iconResults" class="icon-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;"></div>
+        <div id="iconResults" class="icon-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+          "></div>
         <div class="pagination">
             <button id="prevButton" disabled>
                 <i class="fas fa-chevron-left"></i> Previous
@@ -69,10 +214,8 @@
             </button>
         </div>
     </div>
-
-
-    </div>  
-     <div id="iconPreviewModal" class="icon-preview-modal">
+    </div>
+    <div id="iconPreviewModal" class="icon-preview-modal">
         <div class="icon-preview-content">
             <div class="icon-preview-header">
                 <h2 id="modalIconName">Icon Name</h2>
@@ -80,7 +223,7 @@
             </div>
             <div class="icon-preview-body">
                 <div class="icon-preview-visual">
-                    <div id="modalIconPreview" style="font-size: 200px;">
+                    <div id="modalIconPreview" style="font-size: 200px">
                         <iconify-icon id="modalIconIcon"></iconify-icon>
                     </div>
                 </div>
@@ -90,24 +233,25 @@
                         <pre id="svgCodePreview" class="svg-code-preview"></pre>
                         <button id="copySvgCodeBtn" class="copy-svg-btn" aria-label="Copy SVG Code">
                             <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
                             </svg>
                             <svg class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style>
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                             </svg>
                             <span class="tooltip">Copy SVG</span>
                         </button>
                     </div>
                     <div class="download-buttons">
-                        <button id="downloadIcon" class="action-btn action-btn-primary">Download Icon</button>
+                        <button id="downloadIcon" class="action-btn action-btn-primary">
+                            Download Icon
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"></script>
-</body>
-</html>
+    </div> -->
 
+    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"></script>
+  </body>
+</html>
