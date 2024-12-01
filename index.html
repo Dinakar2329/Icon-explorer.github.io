@@ -23,13 +23,27 @@
         font-family: "Jost", sans-serif !important;
         scroll-behavior: smooth;
       }
+      .logo{
+        font-size: 1.8rem !important;
+        color: #3a5fcd !important;
+      }
+       .navbar{
+        color: #3a5fcd !important;
+
+      }
+      @media screen and (max-width: 768px) {
+        .hero-img{
+          width: 100%;
+        }
+        
+      }
     </style>
   </head>
 
   <body>
     <div class="navbar bg-base-50 bg-white text-primary-content">
       <div class="flex-1">
-        <a class="btn btn-ghost text-xl" href="index.html">Icon Explorer</a>
+        <a class="btn btn-ghost text-xl logo" href="index.html">Icon Explorer</a>
       </div>
       <div class="flex-none">
         <ul class="menu menu-horizontal px-1">
@@ -44,7 +58,7 @@
         <img
           src="https://picsum.photos/800/600?theme=nature"
           alt="Icon Explorer Illustration"
-          class="max-w-sm rounded-lg shadow-2xl"
+          class="max-w-sm rounded-lg shadow-2xl hero-img"
           data-aos="fade-left"
         />
         <div data-aos="fade-right">
