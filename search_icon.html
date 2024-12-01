@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./Images/favicon.png" type="image/png" />
+    <title>Search Icons | Icon Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="navbar bg-base-50 bg-white text-primary-content">
+        <div class="flex-1">
+            <a class="btn btn-ghost text-xl" href="index.html">Icon Explorer</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="search_icon.html">Search Icons</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Search Options -->
+    <div class="search-options p-5">
+        <div class="search-container ">
+            <input type="text" id="iconSearch" placeholder="Search icons..."
+                class="input bg-white input-bordered w-full max-w-xs" />
+            <button id="searchBtn" class="btn btn-primary text-white">
+                <i class="fas fa-search "></i> Search
+            </button>
+        </div>
+    </div>
+    </div>
+
+    <div class="icon-results">
+        <div id="iconResults" class="icon-grid" style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+          "></div>
+        <div class="pagination flex justify-between items-center mt-5">
+            <button id="prevButton" disabled class="btn btn-secondary">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span id="pageInfo"></span>
+            <button id="nextButton" class="btn btn-secondary">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="iconPreviewModal" class="icon-preview-modal">
+        <div class="icon-preview-content">
+            <div class="icon-preview-header">
+                <h2 id="modalIconName">Icon Name</h2>
+                <button id="closePreviewModal">&times;</button>
+            </div>
+            <div class="icon-preview-body">
+                <div class="icon-preview-visual">
+                    <div id="modalIconPreview" style="font-size: 200px">
+                        <iconify-icon id="modalIconIcon"></iconify-icon>
+                    </div>
+                </div>
+                <div class="icon-preview-details">
+                    <h3>SVG Code</h3>
+                    <div class="svg-code-container">
+                        <pre id="svgCodePreview" class="svg-code-preview"></pre>
+                        <button id="copySvgCodeBtn" class="copy-svg-btn" aria-label="Copy SVG Code">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                            </svg>
+                            <svg class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                style="display:none;">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                            </svg>
+                            <span class="tooltip">Copy SVG</span>
+                        </button>
+                    </div>
+                    <div class="download-buttons">
+                        <button id="downloadIcon" class="action-btn action-btn-primary">
+                            Download Icon
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+     <!-- Loading and Results -->
+    <div id="loading" class="hidden">
+        <i class="fas fa-spinner fa-spin fa-2x"></i>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.1.1/dist/iconify.min.js"></script>
+</body>
+
+</html>
