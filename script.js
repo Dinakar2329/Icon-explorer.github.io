@@ -40,9 +40,9 @@ const searchInput = document.getElementById("iconSearch");
 const searchBtn = document.getElementById("searchBtn");
 const iconResults = document.getElementById("iconResults");
 const loadingIndicator = document.getElementById("loading");
-const prevButton = document.getElementById("prevButton");
-const nextButton = document.getElementById("nextButton");
-const pageInfo = document.getElementById("pageInfo");
+// const prevButton = document.getElementById("prevButton");
+// const nextButton = document.getElementById("nextButton");
+// const pageInfo = document.getElementById("pageInfo");
 
 let currentStart = 0;
 let totalIcons = 0;
@@ -168,7 +168,7 @@ async function searchIcons() {
 
     // Update total icons and pagination
     totalIcons = data.total;
-    updatePagination();
+    // updatePagination();
 
     // Render icons
     if (data.icons && data.icons.length > 0) {
@@ -188,14 +188,14 @@ async function searchIcons() {
   }
 }
 
-function updatePagination() {
-  const lastIcon = Math.min(currentStart + currentLimit, totalIcons);
+// function updatePagination() {
+//   const lastIcon = Math.min(currentStart + currentLimit, totalIcons);
 
-  pageInfo.textContent = `${currentStart + 1} - ${lastIcon} of ${totalIcons}`;
+//   pageInfo.textContent = `${currentStart + 1} - ${lastIcon} of ${totalIcons}`;
 
-  prevButton.disabled = currentStart === 0;
-  nextButton.disabled = currentStart + currentLimit >= totalIcons;
-}
+//   prevButton.disabled = currentStart === 0;
+//   nextButton.disabled = currentStart + currentLimit >= totalIcons;
+// }
 
 async function createIconCard(icon) {
   const card = document.createElement("div");
@@ -244,20 +244,20 @@ searchInput.addEventListener("keypress", (e) => {
   }
 });
 
-// Pagination Buttons
-prevButton.addEventListener("click", () => {
-  currentStart = Math.max(0, currentStart - currentLimit);
-  searchIcons();
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// // Pagination Buttons
+// prevButton.addEventListener("click", () => {
+//   currentStart = Math.max(0, currentStart - currentLimit);
+//   searchIcons();
+//   // Scroll to top
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// });
 
-nextButton.addEventListener("click", () => {
-  currentStart += currentLimit;
-  searchIcons();
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// nextButton.addEventListener("click", () => {
+//   currentStart += currentLimit;
+//   searchIcons();
+//   // Scroll to top
+//   window.scrollTo({ top: 0, behavior: "smooth" });
+// });
 
 // Initial load
 window.addEventListener("load", () => {
