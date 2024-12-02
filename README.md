@@ -2,6 +2,10 @@
 
 A web-based application to search and explore icons effortlessly. This project provides an intuitive interface for finding and displaying icons with seamless interactivity.
 
+## Access the Site
+
+Explore the application live here: [Icon Explorer](https://dinakar2329.github.io/Icon-explorer.github.io/)
+
 ## Features
 
 - **Icon Search**: Quickly search for icons by name or keyword.
